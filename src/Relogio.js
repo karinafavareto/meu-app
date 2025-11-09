@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function Relogio() {
-    // 1. Inicializa o estado 'time' com a hora atual.
-    const [time, setTime] = useState(new Date().toLocaleTimeString());
+const Relogio = () => { // arrow function, omitindo as chaves {}, possui retorno implícito
+    
+    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
-        // Função para atualizar o estado com a nova hora.
-        function tick() {
-            setTime(new Date().toLocaleTimeString());
+
+        const intervalId = setInterval(() => { setTime(new Date()); }, 1000); // setup / montagem
+                                                // função               // tempo
+        
+        return () => { // cleanup / desmontagem | recebe a instrução de como parar a execução; é executada depois
+            clearInterval(intervalId);
         }
 
-        // 2. Inicia o intervalo de atualização a cada 1 segundo (1000ms).
-        const intervalId = setInterval(tick, 1000);
+    }, [] ); // array de dependências, quando vazio, garante que o efeito só rode uma vez (no momento da montagem do componente)
 
-        // 3. Limpeza: Essencial. Retorna a função que para o intervalo
-        // quando o componente é desmontado.
-        return () => clearInterval(intervalId);
+    return ( //retorna o jsx, a parte visual
+        <>
+            <h1>Hora atual</h1>
+            <p>{time.toLocaleTimeString()}</p>
+        </>
         
-    }, []); // O array vazio garante que o setInterval rode APENAS uma vez.
-
-    // O componente renderiza o estado 'time'.
-    return (
-        <div>
-            <h3>{time}</h3>
-        </div>
-    );
+    )
 }
 
 export default Relogio;
