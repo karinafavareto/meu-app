@@ -29,13 +29,13 @@ const Letreiro = () => {
             clearInterval(intervalId);
         }
 
-    }, [resetKey] ) // função configurada na montagem; o valor de text fica congelado em "" dentro do setInterval; colocar o text aqui é ineficiente, pois o useEffect seria re-executado 16 vezes
+    }, [resetKey, text.length] ) // função configurada na montagem; o valor de text fica congelado em "" dentro do setInterval; colocar o text aqui é ineficiente, pois o useEffect seria re-executado 16 vezes
 
     return (
-        <>
-            <h1>Letreiro</h1>
-            <p>{text}</p>
-        </>
+        <div className="container d-flex flex-column align-items-center mt-5">
+            <h2>Letreiro</h2>
+            <h4>{text}</h4>
+        </div>
     )
     
 }
