@@ -1,4 +1,4 @@
-import React from 'react';
+import './styles.css';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MinhasRotas from './minhasRotas';
