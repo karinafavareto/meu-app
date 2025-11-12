@@ -11,7 +11,7 @@ const ContadorBotao = ({
     labelMinus
 }) => {
     return (
-        <div className="card shadow p-4 text-center h-100"> 
+        <div className="shadow p-4 text-center h-100"> 
             
             <img 
                 src={iconeURL} 
@@ -41,5 +41,6 @@ const ContadorBotao = ({
         </div>
     );
 };
+
 
 export default ContadorBotao;
