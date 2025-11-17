@@ -8,7 +8,7 @@ const Atv01 = () => {
            <h1 className="display-3 mb-5">Atividade 1</h1>
            <Relogio />
            <Letreiro />
-        <Link to="../"><button type="button" className="btn btn-info mt-5">Voltar</button></Link>
+        <Link to="../"><button type="button" className="btn btn-info mt-5 mb-5">Voltar</button></Link>
         </div>
     )
 }

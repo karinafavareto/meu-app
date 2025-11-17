@@ -8,13 +8,16 @@ const Home = () =>{
             <nav>
                 <ul className="list-group">
                     <li class="list-group-item list-group-item-action">
-                        <Link to="/Atv01"><h5 className="display-6">Atividade 1</h5></Link>
+                        <Link to="/Atv01" className="text-decoration-none"><h5 className="display-6">Atividade 1</h5></Link>
                     </li>
                     <li class="list-group-item list-group-item-action">
-                        <Link to="/Atv02"><h5 className="display-6">Atividade 2</h5></Link>
+                        <Link to="/Atv02" className="text-decoration-none"><h5 className="display-6">Atividade 2</h5></Link>
                     </li>
                     <li class="list-group-item list-group-item-action">
-                        <Link to="/Atv03"><h5 className="display-6">Atividade 3</h5></Link>
+                        <Link to="/Atv03" className="text-decoration-none"><h5 className="display-6">Atividade 3</h5></Link>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <Link to="/Atv04" className="text-decoration-none"><h5 className="display-6">Atividade 4</h5></Link>
                     </li>
                 </ul>
             </nav>

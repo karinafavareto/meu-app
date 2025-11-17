@@ -42,5 +42,4 @@ const ContadorBotao = ({
     );
 };
 
-
 export default ContadorBotao;

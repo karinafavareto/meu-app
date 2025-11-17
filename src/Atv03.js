@@ -20,7 +20,7 @@ const Atv03 = () => {
            <List />
            <FullRecipe />
            <TeaSet />
-        <Link to="../"><button type="button" className="btn btn-info mt-5">Voltar</button></Link>
+        <Link to="../"><button type="button" className="btn btn-info mt-5 mb-5">Voltar</button></Link>
         </div>
     )
 }
